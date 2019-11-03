@@ -1,0 +1,20 @@
+function jumpingJimmy(tower, jumpHeight) {
+ 
+    if(jumpHeight < tower[0]) {
+        return 0;    
+    }
+
+    let currentHeight = 0;
+    
+	for(let i = 0; i < tower.length;i++) {
+        
+		let currentNumber = tower[i];
+        
+		if(currentNumber <= jumpHeight) {
+			currentHeight += currentNumber;
+		} else {
+			return currentHeight;
+		}
+	}
+    return currentHeight;
+}
